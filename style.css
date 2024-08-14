@@ -1,0 +1,109 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+     /* .container{
+         background-color: rgb(222, 241, 241);
+        height: 769px;
+        
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            margin-top: 30px;
+ 
+           
+
+        } */
+        /* .box{ */
+           
+            /* background-image: url(./OIP\ \(4\).jfif); */
+            /* background-size: cover; */
+            /* height: 600px;
+            width: 400px; */
+            /* border: 5px solid black; */
+            /* border-radius: 2px;
+            background-color: ;
+            
+        
+          
+        }  */
+        /* h1{
+            color: rgb(25, 111, 185);
+        } */
+         /* h1 {
+            text-align: center;
+            font-size: 20px;
+            color: blueviolet;
+
+
+         }
+         form {
+            margin: 20px auto;
+            width: 400px;
+            background-color: blueviolet;
+            height: 300px;
+            margin-left: ;
+            
+        
+         } */
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        /* .hello{
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        } */
+        .center{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            width: 100%;
+        }
+        
+        form {
+            background-color: #da5252;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: rgb(0, 30, 128);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4ec2bc;
+        }
+    

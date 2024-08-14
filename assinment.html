@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+      .width-25{
+   width: 25%;
+   float: left;
+}
+.gallery-img{
+    height: 250px;
+    width: auto;
+}
+.recruiter-head-style{
+font-size: 28px;
+color: #4b4848;
+margin-bottom: 5px;
+}
+.recruiter-marquee{
+height: 100px;
+}
+.recruiter-marquee img{
+    height: 80px;
+    width: 140px;
+}
+
+.footer{
+background: #232f3e;
+padding: 50px 0px;
+
+width: 1110px;
+height: 350px;
+}
+.quicklink-heading{
+font-size: 18px;
+font-weight: bold;
+color: #fff;
+margin-bottom: 10px;
+}
+.quicklink-menu{
+list-style: none;
+padding-left: 10px;
+}
+.quicklink-menu li a {
+    color: #fff;
+    line-height: 2.5;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+.get-in-touch{
+list-style: none;
+padding-left: 10px;
+}
+.get-in-touch li i {
+color: #ed372c;
+font-size: 20px;
+}
+.get-in-touch li {
+color: #fff;
+line-height: 2.5;
+font-size: 15px;
+}
+.footer-e-mail{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.footer-website{
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.social-media{
+list-style: none;
+margin-top: 10px;
+}
+.social-media li{
+float: left;
+padding: 0px 8px;
+}
+.social-media li a img{
+width: 30px;
+}
+.footer2-bacbor{
+background: #232f3e;
+padding: 10px 0px;
+border-top: 1px solid #898989;
+}
+.footer2-content{
+font-weight: 14px;
+color: #fff;
+text-align: center;
+  } 
+  /* .center{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            width: 100%;
+        }
+        
+        form {
+            background-color: #da5252;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        button {
+            background-color: rgb(0, 30, 128);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4ec2bc;
+        } */
+      
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="assinment.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
+               
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+
+
+                      
+ 
+   
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <script>
+    
+         const firebaseConfig = {
+    apiKey: "AIzaSyCK7IP-To1MFRVdg4x-as_qDdBIxT3mEJA",
+    authDomain: "app-appp.firebaseapp.com",
+    projectId: "app-appp",
+    storageBucket: "app-appp.appspot.com",
+    messagingSenderId: "753608357188",
+    appId: "1:753608357188:web:8eacaa77b772713ca69311"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    
+ 
+    </script>
+
+
+
+
+
+
+            
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="mx-2"><button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">login</button
+      ><button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">signup</button></div>
+  </div>
+</nav>
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="signup(event)">
+          <h1>
+            sigin
+          </h1>
+          <input type="text" placeholder="enter your email" id="email">
+          <input type="password" placeholder="password" id="password">
+          <button type="submit">submit</button>
+        </form>
+         <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary">login</button>
+        </form> 
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ signup Modal
+ <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="login(event)">
+          <h1>
+            login
+          </h1>
+          <input type="text" placeholder="enter your email" id="login_email">
+          <input type="password" placeholder="password" id="login_password">
+          <button type="submit">login</button>
+          <button onclick="logout()">logout</button>
+          <div class="wellcome-box">
+             <h4>wellcome-box</h4>
+          </div>
+          <div class="center">
+            <h4>your account details</h4>
+          </div> 
+           <div class="userdetails">
+            <h4>login</h4>
+          </div>
+        </form>  --
+         <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">create account</button>
+</form> -
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./1.jpeg" class="d-block w-100"  alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./Image 7.jpg" class="d-block w-100"  alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="download (4).jfif" class="d-block w-100"  alt="...">
+        
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary"></strong>
+                  <h3 class="mb-0">DIPLOMA IN INFORMATION TECHNOLOGY
+                  </h3>
+                  <div class="mb-1 text-muted"></div>
+                  <p class="card-text mb-auto">Tech Innovators in the Making
+
+                    Embark on a journey of innovation with our Diploma in Information Technology program. From coding breakthroughs to collaborative projects, witness our students shaping the future of technology. Explore glimpses of dynamic classrooms, coding marathons, and the vibrant community that defines our tech ecosystem.
+                    
+                    </p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img class="bd-placeholder-img" width="200" height="250"  src= "./img333.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success"></strong>
+                  <h3 class="mb-0">Jeejal Amaan</h3>
+                  <div class="mb-1 text-muted"></div>
+                  <p class="mb-auto">Beyond Bytes: Crafting Technological Visionaries
+
+                    Delve into the immersive world of our IT program, where bytes transform into visions. Glimpse the fusion of technical proficiency and creative brilliance as our students navigate the digital landscape. 
+                    </p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img class="bd-placeholder-img" width="200" height="250"  src= "./imgbbbbb.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-primary"></strong>
+                  <h3 class="mb-0">Rev Up Your Career: Precision in Every Turn
+                  </h3>
+                  <div class="mb-1 text-muted"></div>
+                  <p class="card-text mb-auto">
+                    Unveil the world of motorcycle engineering with our Motorcycle Mechanic program. Experience the precision, expertise, and hands-on learning that define our curriculum. View glimpses of our students navigating the complexities of motorcycle mechanics, ensuring they are geared up for a dynamic career in the field.
+                    </p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img class="bd-placeholder-img" width="200" height="250"  src= "./tttt.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <strong class="d-inline-block mb-2 text-success"></strong>
+                  <h3 class="mb-0">On the Road to Expertise: The Motorcycle Mechanic Journey
+                  </h3>
+                  <div class="mb-1 text-muted"></div>
+                  <p class="mb-auto">  Embark on a journey through the engine's heart with our Motorcycle Mechanic training. Glimpse into the hands-on workshops, diagnostic sessions, and real-world scenarios where our students fine-tune their skills. 
+                  </p>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                  <img class="bd-placeholder-img" width="200" height="250"  src= "./ffff.png" alt=""> 
+              </div>
+            </div>
+          </div>
+      </div>
+     <!-- <div class="scroll-product">
+        <div class="product">
+        <img src="./1.jpeg" alt=""width="400px" >
+        <img src="./1.jpeg" alt=""width="400px">
+        <img src="./1.jpeg" alt=""width="400px">
+        <img src="./1.jpeg" alt=""width="400px">
+        <img src="./1.jpeg" alt=""width="400px">
+   
+        
+        </div>
+        </div> -->
+        
+        
+      <div class="width-100 margin-top-50">
+        <div class="container">
+            <h3 data-aos="fade-up"class="recruiter-head-style"> </h3>
+            <H3 style="display: flex; justify-content: center;">Jeejal Aman Public School:</H3>
+            <marquee class="recruiter-marquee">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+                <img src="jamzzz.jfif">
+            </marquee>
+            </div>
+            </div>
+      <div class="width-100 margin-top-50 footer">
+        <div class="container">
+            <div class="width-25" data-aos="fade-up" data-aos-offset="200">
+                <h2 class="quicklink-heading">Quick Link</h2>
+                <ul class="quicklink-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                </div>
+                
+                <!-- <div class="col-md-5 order-md-1"> -->
+                  <!-- <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100" height="500" src="./jamzzz.jfif" alt=""> -->
+                <div class="width-25" data-aos="fade-up" data-aos-offset="200">
+                    <h2 class="quicklink-heading">Quick Link</h2>
+                    <ul class="quicklink-menu">
+                        <li><a href="#">student sectio></a></li>
+                        <li><a href="#">result</a></li>
+                        <li><a href="#">pay fee</a></li>
+                        <li><a href="#">placements</a></li>
+                    </ul>
+                    </div>
+                    <div class="width-25" data-aos="fade-up" data-aos-offset="200">
+                        <h2 class="quicklink-heading">Information Links</h2>
+                        <ul class="quicklink-menu">
+                            <li><a href="#">news</a></li>
+                            <li><a href="#">R$D policy</a></li>
+                            <li><a href="#">anti-raggin</a></li>
+                            <li><a href="#">admissin</a></li>
+                        </ul>
+                        </div>
+                        <div class="width-25" data-aos="fade-up" data-aos-offset="200">
+                            <h2 class="quicklink-heading">Get In Touch</h2>
+                            <ul class="get-in-touch">
+                                <li><i class="fa fa-envelope-o"></i> E-MAIL :<a href="#" class="footer-e-mail">azizzoya10@gmail.com<a></li>
+                                <li><i class="headphones"></i> WHATS-APP: +923033924084</li>
+                                <li><i class="fa fa-fax"></i> CONTACT NO.: +923218281283</li>
+                                <li><i class="fa fa-globe"></i> WEBSITE :<a href="#" class="footer-website"> https:www//zoya mahar.com</a></li>
+                            </ul>
+                            <ul class="social-media">
+                                <li><a href="#"><img src="facebook.png"></a></li>
+                                <li><a href="#"><img src="instagram.png"></a></li>
+                                <li><a href="#"><img src="linkedin.png"></a></li>
+                                <li><a href="#"><img src="twitter.png"></a></li>
+                            </ul>
+
+                         
+                            
+                        
+                </div>
+            </div> 
+          </div>
+          <div style="height: 10pxs;margin-bottom: 400pxs;" >
+          <img src="jamzzz.jfif" style="width: 100px;display: flex;justify-content: center;">
+        
+          </div>
+            <div class="width-100 footer2-bacbor">
+                <p class="footer2-content">copyright @ 2024, azizzoya10@gmail.com </p>
+            </div> 
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            
+            <script>
+                AOS.init();
+              </script> 
+                      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
